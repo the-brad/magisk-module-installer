@@ -1,6 +1,6 @@
-id=template
+id=custom vold fpr RP2
 name=Template Module
 version=v1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=the_brad
+description=Custom vold for arter97 kernel on Razer Phone 2, made by arter97. I hope, I'm gonna get exfat to work :)
