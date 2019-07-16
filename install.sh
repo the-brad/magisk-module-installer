@@ -97,7 +97,6 @@ REPLACE="
 #     print error message <msg> to console and terminate installation
 #     Avoid using 'exit' as it will skip the termination cleanup steps
 #
-# set_perm <target> <owner> <group> <permission> [context]
 #     if [context] is empty, it will default to "u:object_r:system_file:s0"
 #     this function is a shorthand for the following commands
 #       chown owner.group target
@@ -148,6 +147,7 @@ set_permissions() {
 
   # Here are some examples:
   # set_perm_recursive  $MODPATH/system/lib       0     0       0755      0644
+  set_perm $MODPATH/system/system/bin/vold root shell 755 u:object_r:vold_exec:s0
   set_perm  $MODPATH/system/bin/system/vold       0     2000    0755      u:object_r:vold_exec:s0
   # set_perm  $MODPATH/system/bin/dex2oat         0     2000    0755      u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0     0       0644
