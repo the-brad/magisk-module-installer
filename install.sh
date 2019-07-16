@@ -123,7 +123,9 @@ REPLACE="
 
 print_modname() {
   ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
+  ui_print "      modified vold for        "
+  ui_print "      arter97 kernel for       " 
+  ui_print "      Razer Phone 2,           "
   ui_print "*******************************"
 }
 
@@ -146,7 +148,7 @@ set_permissions() {
 
   # Here are some examples:
   # set_perm_recursive  $MODPATH/system/lib       0     0       0755      0644
-  # set_perm  $MODPATH/system/bin/app_process32   0     2000    0755      u:object_r:zygote_exec:s0
+  set_perm  $MODPATH/system/bin/system/vold       0     2000    0755      u:object_r:vold_exec:s0
   # set_perm  $MODPATH/system/bin/dex2oat         0     2000    0755      u:object_r:dex2oat_exec:s0
   # set_perm  $MODPATH/system/lib/libart.so       0     0       0644
 }
